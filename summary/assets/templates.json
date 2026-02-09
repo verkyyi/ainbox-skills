@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "en": "{greeting}\n\nBased on your forwarded email, here's a quick summary:\n\n------\n{summary}\n------\n\n{tip}",
+    "zh": "{greeting}\n\n以下是您转发邮件的摘要：\n\n------\n{summary}\n------\n\n{tip}"
+  },
+  "agent": {
+    "en": "{greeting}\n\n{summary}\n\n{tip}",
+    "zh": "{greeting}\n\n{summary}\n\n{tip}"
+  },
+  "guidance": {
+    "subject": {
+      "en": "Re: {originalSubject}",
+      "zh": "Re: {originalSubject}"
+    },
+    "body": {
+      "en": "{greeting}\n\nIt looks like you sent this email directly to aInbox. Right now, aInbox works by summarizing *forwarded* emails.\n\nTo get a summary, just forward the email you want summarized to summary@ainbox.io — you'll receive a summary within seconds.\n\nDirect email summarization is coming soon — stay tuned!\n\n— aInbox",
+      "zh": "{greeting}\n\n看起来你直接发送了邮件给 aInbox。目前 aInbox 只支持摘要转发的邮件。\n\n使用方法：将你想摘要的邮件转发到 summary@ainbox.io，几秒内就能收到摘要。\n\n直接发送邮件的摘要功能即将上线，敬请期待！\n\n— aInbox"
+    }
+  },
+  "rateLimit": {
+    "subject": {
+      "en": "[aInbox] Daily limit reached",
+      "zh": "[aInbox] 今日额度已用完"
+    },
+    "body": {
+      "en": "{greeting}\n\nYou've used all {limit} email summaries for today. Your limit resets in about {hoursLeft}h.\n{refSection}\n\naInbox is free during beta — we'll increase limits as we grow.\n\nFeedback? {feedbackEmail}",
+      "zh": "{greeting}\n\n你今天的 {limit} 条邮件摘要额度已全部用完，约 {hoursLeft} 小时后重置。\n{refSection}\n\naInbox 公测期间免费 — 随着发展我们会提高额度。\n\n反馈？{feedbackEmail}"
+    }
+  }
+}
