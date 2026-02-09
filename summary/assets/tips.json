@@ -1,0 +1,34 @@
+[
+  {
+    "en": "Private by design — your emails are processed in real-time and never stored.",
+    "zh": "隐私优先 — 您的邮件实时处理，绝不存储。"
+  },
+  {
+    "en": "aInbox is free during beta ({dailyLimit} summaries/day).",
+    "zh": "aInbox 公测期间免费（每天 {dailyLimit} 条摘要）。"
+  },
+  {
+    "en": "You have {remaining}/{limit} summaries left today. Share aInbox with friends — they add ref:{referralCode} in the subject when forwarding, and you both get +{referralBonus} extra/day.",
+    "zh": "你今天还剩 {remaining}/{limit} 条摘要。邀请好友使用 aInbox — 他们在转发时主题中加上 ref:{referralCode}，你们双方都能获得每天 +{referralBonus} 额外额度。"
+  },
+  {
+    "en": "Feedback? {feedbackEmail}",
+    "zh": "反馈？{feedbackEmail}"
+  },
+  {
+    "en": "Tip: aInbox can summarize images too — just forward emails with inline images.",
+    "zh": "提示：aInbox 也能处理图片 — 直接转发含内嵌图片的邮件即可。"
+  },
+  {
+    "en": "Tip: Forward multiple .eml attachments in one email for batch summaries.",
+    "zh": "提示：在一封邮件中转发多个 .eml 附件，即可批量获取摘要。"
+  },
+  {
+    "en": "Tip: aInbox auto-detects the language of your email and replies in the same language.",
+    "zh": "提示：aInbox 自动检测邮件语言并使用相同语言回复。"
+  },
+  {
+    "en": "Tip: aInbox flags suspicious phishing emails — stay safe with every summary.",
+    "zh": "提示：aInbox 会标记可疑的钓鱼邮件 — 每次摘要都帮您安全把关。"
+  }
+]
