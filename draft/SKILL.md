@@ -10,19 +10,8 @@ metadata:
 
 config:
   openaiModel: gpt-4.1-mini
-  maxCompletionTokens: 4096
-  temperature: null
-  maxBodyChars: 24000
   dailyLimit: 30
-  fromEmail: draft@ainbox.io
-  fromName: aInbox Draft
-  feedbackEmail: feedback@ainbox.io
-  fallbackForwardTo: ""
   autoReplyGuidance: false
-  allowedSenders: []
-  blockedSenders: []
-  senderLimitOverrides: {}
-  dryRun: false
 
 variables:
   prompt:

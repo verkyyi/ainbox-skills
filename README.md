@@ -46,24 +46,24 @@ The prompt contains `{variable}` placeholders that are interpolated at runtime (
 
 ## Config reference
 
-These fields in the `config:` block control how the platform runs the agent:
+The `config:` block only needs fields that differ from server defaults. Omitted fields use the defaults shown below. `fromEmail` and `fromName` are derived from the agent's folder name (e.g. `draft/` → `draft@ainbox.io`, `draft`).
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `openaiModel` | string | yes | LLM model ID passed to the API (e.g. `gpt-4.1-mini`) |
-| `maxCompletionTokens` | int | yes | Max tokens the LLM may generate per reply |
-| `temperature` | float\|null | no | Sampling temperature (`null` = model default) |
-| `maxBodyChars` | int | yes | Truncate inbound email body beyond this character limit |
-| `dailyLimit` | int | yes | Max requests per sender per calendar day (UTC) |
-| `fromEmail` | string | yes | Envelope-from address on outbound replies |
-| `fromName` | string | yes | Display name on outbound replies |
-| `feedbackEmail` | string | yes | Shown in error and rate-limit templates |
-| `fallbackForwardTo` | string | no | Forward unprocessable emails to this address (empty = discard) |
-| `autoReplyGuidance` | bool | no | Send a guidance reply when the agent can't determine the mode |
-| `allowedSenders` | string[] | no | Allowlist of sender addresses (empty = allow everyone) |
-| `blockedSenders` | string[] | no | Blocklist of sender addresses (checked before allowlist) |
-| `senderLimitOverrides` | object | no | Per-sender daily limit overrides, e.g. `{"vip@co.com": 100}` |
-| `dryRun` | bool | no | `true` = log replies but don't actually send them |
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `openaiModel` | string | `gpt-5` | LLM model ID passed to the API |
+| `maxCompletionTokens` | int | `4096` | Max tokens the LLM may generate per reply |
+| `temperature` | float\|null | `null` | Sampling temperature (`null` = model default) |
+| `maxBodyChars` | int | `24000` | Truncate inbound email body beyond this character limit |
+| `dailyLimit` | int | `50` | Max requests per sender per calendar day (UTC) |
+| `fromEmail` | string | `{name}@ainbox.io` | Envelope-from address on outbound replies |
+| `fromName` | string | `{name}` | Display name on outbound replies |
+| `feedbackEmail` | string | `feedback@ainbox.io` | Shown in error and rate-limit templates |
+| `fallbackForwardTo` | string | `""` | Forward unprocessable emails to this address (empty = discard) |
+| `autoReplyGuidance` | bool | `true` | Send a guidance reply when the agent can't determine the mode |
+| `allowedSenders` | string[] | `[]` | Allowlist of sender addresses (empty = allow everyone) |
+| `blockedSenders` | string[] | `[]` | Blocklist of sender addresses (checked before allowlist) |
+| `senderLimitOverrides` | object | `{}` | Per-sender daily limit overrides, e.g. `{"vip@co.com": 100}` |
+| `dryRun` | bool | `false` | `true` = log replies but don't actually send them |
 
 ## Variable contract
 
