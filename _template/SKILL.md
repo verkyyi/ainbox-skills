@@ -20,21 +20,6 @@ config:
   openaiModel: gpt-4.1-mini            # LLM model ID passed to the API
   dailyLimit: 30                        # Max requests per sender per calendar day
 
-# ── Variable contract ────────────────────────────────────────────────────────
-# Declare every {variable} your prompt and assets expect so the platform can
-# validate at load time and contributors know what's available.
-variables:
-  prompt:                               # Variables used inside the system prompt below
-    - dailyLimit
-  templates:                            # Variables used inside assets/templates.json
-    - greeting
-    - result
-    - tip
-    - originalSubject
-    - limit
-    - hoursLeft
-    - feedbackEmail
-
 ---
 
 You are aInbox My Agent, an AI email assistant at my-agent@ainbox.io.

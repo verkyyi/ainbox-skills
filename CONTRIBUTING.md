@@ -46,7 +46,6 @@ The YAML frontmatter has these required sections:
 | `description` | One-sentence summary of the agent |
 | `metadata` | `author` (your GitHub username) and `version` |
 | `config` | Runtime overrides only — omitted fields use server defaults. See [Config reference](README.md#config-reference) |
-| `variables` | Declares every `{variable}` your prompt and assets expect |
 
 ### templates.json
 
@@ -66,7 +65,7 @@ Each `.txt` file contains a sample email input and expected output, separated by
 
 ## Guidelines
 
-- **Preserve `{variable}` placeholders** — the app depends on them at runtime. Removing or renaming a placeholder will break things. Check the `variables:` section in SKILL.md to see which variables the agent declares.
+- **Preserve `{placeholder}` strings** — the app depends on them at runtime. Removing or renaming a placeholder will break things. See [Runtime variables](README.md#runtime-variables) for the full list.
 - **Keep prompts concise** — the LLM context window is shared with email content, so shorter prompts leave more room for the actual email.
 - **Follow the [Agent Skills spec](https://agentskills.io/specification)** — `SKILL.md` files must have valid YAML frontmatter.
 - **Support both EN and ZH** — templates are bilingual. If you update one language, please update the other too (or note in your PR that a translation is needed).
@@ -80,8 +79,7 @@ Each `.txt` file contains a sample email input and expected output, separated by
 3. Write your system prompt in the markdown body
 4. Customize `templates.json` for your agent's purpose
 5. Add 2-3 example emails in `examples/` covering the main modes
-6. Update the `variables:` block to declare every `{variable}` your files use
-7. Explain the agent's purpose and use case in your PR description
+6. Explain the agent's purpose and use case in your PR description
 
 Use the existing `summary/` and `draft/` agents as real-world references.
 
