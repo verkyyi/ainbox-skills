@@ -17,6 +17,12 @@
       "zh": "{greeting}\n\n看起来你直接发送了邮件给 aInbox。目前 aInbox 只支持摘要转发的邮件。\n\n使用方法：将你想摘要的邮件转发到 summary@ainbox.io，几秒内就能收到摘要。\n\n直接发送邮件的摘要功能即将上线，敬请期待！\n\n— aInbox"
     }
   },
+  "error": {
+    "body": {
+      "en": "{greeting}\n\nSorry, something went wrong while processing your email. Please try forwarding it again in a few minutes.\n\nIf this keeps happening, let us know at {feedbackEmail}.\n\n— aInbox",
+      "zh": "{greeting}\n\n抱歉，处理您的邮件时出现了问题。请稍后重新转发这封邮件再试一次。\n\n如果问题持续出现，请联系 {feedbackEmail}。\n\n— aInbox"
+    }
+  },
   "rateLimit": {
     "subject": {
       "en": "[aInbox] Daily limit reached",
