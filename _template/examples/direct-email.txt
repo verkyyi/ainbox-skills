@@ -1,0 +1,14 @@
+--- Example: direct email input ---
+From: user@example.com
+To: my-agent@ainbox.io
+Subject: What can you do?
+
+Hi, I just heard about this service. How does it work?
+
+
+--- Expected agent output (replace with your agent's expected output) ---
+I'm aInbox My Agent — here's how I work:
+
+[Describe the primary feature and how to use it]
+
+No signup needed — just forward an email and I'll handle the rest.
