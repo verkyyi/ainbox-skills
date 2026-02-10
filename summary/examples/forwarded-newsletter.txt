@@ -1,0 +1,34 @@
+--- Input ---
+From: user@example.com
+To: summary@ainbox.io
+Subject: Fwd: TechCrunch Daily — Feb 10, 2026
+
+---------- Forwarded message ----------
+From: newsletters@techcrunch.com
+Date: Mon, 10 Feb 2026 06:00:00 +0000
+Subject: TechCrunch Daily — Feb 10, 2026
+To: user@example.com
+
+Good morning!
+
+Today's top stories:
+
+1. OpenAI launches GPT-5 with native multimodal reasoning
+OpenAI announced GPT-5 today, featuring built-in image, audio, and video understanding. The model is available now on ChatGPT Plus and the API. Pricing starts at $30/1M input tokens.
+
+2. Stripe acquires fintech startup PayHere for $200M
+Stripe is expanding into Southeast Asia with the acquisition of PayHere, a Sri Lankan payments platform with 50,000 merchants.
+
+3. EU passes AI Liability Directive
+The European Parliament voted to approve the AI Liability Directive, making AI providers liable for damages caused by their systems. Takes effect January 2027.
+
+Read more at techcrunch.com
+
+
+--- Expected output ---
+[Newsletter]
+
+Three stories today:
+- OpenAI launched GPT-5 with native multimodal reasoning — available now on ChatGPT Plus and the API at <b>$30/1M input tokens</b>
+- Stripe acquiring PayHere (Sri Lankan payments, 50k merchants) for $200M to expand into Southeast Asia
+- EU passed the AI Liability Directive — AI providers liable for damages, effective January 2027

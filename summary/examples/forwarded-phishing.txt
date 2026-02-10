@@ -1,0 +1,31 @@
+--- Input ---
+From: user@example.com
+To: summary@ainbox.io
+Subject: Fwd: Urgent: Your account has been compromised
+
+---------- Forwarded message ----------
+From: security-alert@paypa1.com
+Date: Mon, 10 Feb 2026 03:12:00 +0000
+Subject: Urgent: Your account has been compromised
+To: user@example.com
+
+Dear Customer,
+
+We have detected unusual activity on your PayPal account. Your account has been temporarily limited.
+
+To restore access, please verify your identity immediately by clicking below:
+
+https://paypa1-secure-verify.com/login?id=8f3a2b
+
+If you do not verify within 24 hours, your account will be permanently suspended.
+
+Thank you,
+PayPal Security Team
+
+
+--- Expected output ---
+[Security]
+
+⚠ This email may be a phishing attempt — sender domain is "paypa1.com" (not paypal.com), and the verification link goes to "paypa1-secure-verify.com", a spoofed domain. Do not click any links or provide personal information.
+
+Claims unusual activity on your PayPal account and demands identity verification within 24 hours or permanent suspension. Classic urgency + fake link phishing pattern.

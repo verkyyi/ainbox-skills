@@ -1,0 +1,25 @@
+--- Example: forwarded email input ---
+From: user@example.com
+To: my-agent@ainbox.io
+Subject: Fwd: Your order has shipped
+
+---------- Forwarded message ----------
+From: noreply@shop.example.com
+Date: Mon, 10 Feb 2026 09:00:00 +0000
+Subject: Your order has shipped
+To: user@example.com
+
+Hi,
+
+Your order #12345 has shipped! Estimated delivery: Feb 14, 2026.
+Track your package: https://track.example.com/12345
+
+Thanks for shopping with us!
+
+
+--- Expected agent output (replace with your agent's expected output) ---
+[Shipping]
+
+Order #12345 shipped. Estimated delivery: Feb 14, 2026.
+
+-> Track your package at https://track.example.com/12345

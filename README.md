@@ -10,13 +10,15 @@ Each folder maps to an email address receiver at `@ainbox.io`:
 
 ```
 summary/              → summary@ainbox.io
-├── SKILL.md          # System prompt (the AI's instructions)
-└── assets/
-    ├── templates.json  # Email reply templates (EN/ZH)
-    └── tips.json       # Rotating footer tips (EN/ZH)
+├── SKILL.md          # System prompt + config (the AI's instructions)
+├── assets/
+│   ├── templates.json  # Email reply templates (EN/ZH)
+│   └── tips.json       # Rotating footer tips (EN/ZH)
+└── examples/           # Sample emails for testing changes
+    └── *.txt
 ```
 
-Future agents follow the same pattern — `research/` → `research@ainbox.io`, etc.
+To create a new agent, copy `_template/` and follow the instructions inside. See [Contributing](#contributing).
 
 ## How it works
 
@@ -28,10 +30,61 @@ Future agents follow the same pattern — `research/` → `research@ainbox.io`, 
 
 The `SKILL.md` file follows the [Agent Skills specification](https://agentskills.io/specification):
 
-- **YAML frontmatter**: `name`, `description`, and `metadata`
+- **YAML frontmatter**: `name`, `description`, `metadata`, `agent`, `config`, and `variables`
 - **Markdown body**: The system prompt passed directly to the LLM
 
 The prompt contains `{variable}` placeholders that are interpolated at runtime (see below).
+
+### Frontmatter sections
+
+| Section | Purpose |
+|---------|---------|
+| `name` | Agent identifier — must match the folder name and email prefix |
+| `description` | One-sentence description of the agent |
+| `metadata` | `author` and `version` |
+| `agent` | Public profile: `address`, `displayName`, `tagline`, `modes`, `capabilities` |
+| `config` | Runtime configuration consumed by the platform (see below) |
+| `variables` | Declares every `{variable}` the agent's files expect (see below) |
+
+## Config reference
+
+These fields in the `config:` block control how the platform runs the agent:
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `openaiModel` | string | yes | LLM model ID passed to the API (e.g. `gpt-4.1-mini`) |
+| `maxCompletionTokens` | int | yes | Max tokens the LLM may generate per reply |
+| `temperature` | float\|null | no | Sampling temperature (`null` = model default) |
+| `maxBodyChars` | int | yes | Truncate inbound email body beyond this character limit |
+| `dailyLimit` | int | yes | Max requests per sender per calendar day (UTC) |
+| `fromEmail` | string | yes | Envelope-from address on outbound replies |
+| `fromName` | string | yes | Display name on outbound replies |
+| `feedbackEmail` | string | yes | Shown in error and rate-limit templates |
+| `fallbackForwardTo` | string | no | Forward unprocessable emails to this address (empty = discard) |
+| `autoReplyGuidance` | bool | no | Send a guidance reply when the agent can't determine the mode |
+| `allowedSenders` | string[] | no | Allowlist of sender addresses (empty = allow everyone) |
+| `blockedSenders` | string[] | no | Blocklist of sender addresses (checked before allowlist) |
+| `senderLimitOverrides` | object | no | Per-sender daily limit overrides, e.g. `{"vip@co.com": 100}` |
+| `dryRun` | bool | no | `true` = log replies but don't actually send them |
+
+## Variable contract
+
+Each agent declares the `{variable}` placeholders it expects in a `variables:` block in its SKILL.md frontmatter. This serves as a contract between the agent and the platform:
+
+```yaml
+variables:
+  prompt:       # Variables used inside the system prompt (markdown body)
+    - dailyLimit
+  templates:    # Variables used inside assets/templates.json
+    - greeting
+    - summary
+    - tip
+  tips:         # Variables used inside assets/tips.json
+    - dailyLimit
+    - feedbackEmail
+```
+
+This makes each agent self-documenting and allows the platform to validate that all required variables are provided at runtime.
 
 ## Runtime variables
 
@@ -41,7 +94,7 @@ These placeholders are replaced by the aInbox app at runtime:
 
 | Variable | Description |
 |----------|-------------|
-| `{dailyLimit}` | Daily summary quota per sender (e.g. `50`) |
+| `{dailyLimit}` | Daily quota per sender (e.g. `50`) |
 
 ### In templates.json
 
@@ -54,34 +107,28 @@ These placeholders are replaced by the aInbox app at runtime:
 | `{limit}` | rateLimit.body | Total daily limit number |
 | `{hoursLeft}` | rateLimit.body | Hours until daily limit resets |
 | `{refSection}` | rateLimit.body | Referral promotion section (or empty) |
-| `{feedbackEmail}` | rateLimit.body | Feedback email address |
+| `{feedbackEmail}` | error.body, rateLimit.body | Feedback email address |
 
 ### In tips.json
 
 | Variable | Description |
 |----------|-------------|
-| `{dailyLimit}` | Daily summary quota per sender |
-| `{remaining}` | Remaining summaries for the sender today |
+| `{dailyLimit}` | Daily quota per sender |
+| `{remaining}` | Remaining requests for the sender today |
 | `{limit}` | Total daily limit number |
 | `{referralCode}` | Sender's referral code |
-| `{referralBonus}` | Bonus summaries per successful referral |
+| `{referralBonus}` | Bonus per successful referral |
 | `{feedbackEmail}` | Feedback email address |
 
 ## Contributing
 
-Contributions are welcome! You can help improve:
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
 
-- **Prompts** — make summaries more accurate, concise, or useful
-- **Templates** — improve email formatting and wording
-- **Tips** — add helpful tips for users
-- **Translations** — add or improve language support
-
-### Guidelines
-
-- Keep prompts focused and concise — the LLM context window is shared with email content
-- Test your changes with real emails before submitting a PR
-- Preserve all `{variable}` placeholders — the app depends on them
-- Follow the [Agent Skills specification](https://agentskills.io/specification) for SKILL.md format
+Quick start:
+1. Copy `_template/` to a new folder named after your agent's email prefix
+2. Fill in `SKILL.md`, `templates.json`, and `tips.json`
+3. Add example emails in `examples/` so reviewers can test
+4. Submit a PR
 
 ## License
 
