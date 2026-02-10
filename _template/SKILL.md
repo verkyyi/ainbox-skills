@@ -14,22 +14,11 @@ metadata:
   author: your-github-username
   version: "1.0"
 
-# ── Runtime configuration (consumed by the aInbox platform) ──────────────────
+# ── Runtime configuration (overrides only — omitted fields use server defaults) ──
+# See README.md for all available fields and their defaults.
 config:
   openaiModel: gpt-4.1-mini            # LLM model ID passed to the API
-  maxCompletionTokens: 4096            # Max tokens the LLM may generate per reply
-  temperature: null                     # Sampling temperature (null = model default)
-  maxBodyChars: 24000                   # Truncate inbound email body beyond this limit
   dailyLimit: 30                        # Max requests per sender per calendar day
-  fromEmail: my-agent@ainbox.io         # Envelope-from on outbound replies
-  fromName: aInbox My Agent             # Display name on outbound replies
-  feedbackEmail: feedback@ainbox.io     # Shown in error/rate-limit templates
-  fallbackForwardTo: ""                 # Forward unprocessable emails here (empty = discard)
-  autoReplyGuidance: false              # Send a guidance reply when mode is unclear
-  allowedSenders: []                    # Allowlist — empty means everyone is allowed
-  blockedSenders: []                    # Blocklist — checked before allowlist
-  senderLimitOverrides: {}              # Per-sender daily limit overrides, e.g. {"vip@co.com": 100}
-  dryRun: false                         # true = log replies but don't send them
 
 # ── Variable contract ────────────────────────────────────────────────────────
 # Declare every {variable} your prompt and assets expect so the platform can
