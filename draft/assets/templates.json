@@ -1,14 +1,1 @@
-{
-  "result": {
-    "en": "{greeting}\n\nHere's your draft:\n\n------\n{result}\n------\n\n{tip}",
-    "zh": "{greeting}\n\n以下是为您起草的内容：\n\n------\n{result}\n------\n\n{tip}"
-  },
-  "reply-assist": {
-    "en": "{greeting}\n\nHere's a draft reply you can send back:\n\n------\n{result}\n------\n\n{tip}",
-    "zh": "{greeting}\n\n以下是为您起草的回复：\n\n------\n{result}\n------\n\n{tip}"
-  },
-  "draft": {
-    "en": "{greeting}\n\nHere's your draft:\n\n------\n{result}\n------\n\n{tip}",
-    "zh": "{greeting}\n\n以下是为您起草的内容：\n\n------\n{result}\n------\n\n{tip}"
-  }
-}
+{}
