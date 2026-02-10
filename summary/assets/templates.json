@@ -1,11 +1,11 @@
 {
-  "summary": {
-    "en": "{greeting}\n\nBased on your forwarded email, here's a quick summary:\n\n------\n{summary}\n------\n\n{tip}",
-    "zh": "{greeting}\n\n以下是您转发邮件的摘要：\n\n------\n{summary}\n------\n\n{tip}"
+  "result": {
+    "en": "{greeting}\n\nBased on your forwarded email, here's a quick summary:\n\n------\n{result}\n------\n\n{tip}",
+    "zh": "{greeting}\n\n以下是您转发邮件的摘要：\n\n------\n{result}\n------\n\n{tip}"
   },
   "agent": {
-    "en": "{greeting}\n\n{summary}\n\n{tip}",
-    "zh": "{greeting}\n\n{summary}\n\n{tip}"
+    "en": "{greeting}\n\n{result}\n\n{tip}",
+    "zh": "{greeting}\n\n{result}\n\n{tip}"
   },
   "guidance": {
     "subject": {
@@ -18,6 +18,10 @@
     }
   },
   "error": {
+    "subject": {
+      "en": "Re: {originalSubject}",
+      "zh": "Re: {originalSubject}"
+    },
     "body": {
       "en": "{greeting}\n\nSorry, something went wrong while processing your email. Please try forwarding it again in a few minutes.\n\nIf this keeps happening, let us know at {feedbackEmail}.\n\n— aInbox",
       "zh": "{greeting}\n\n抱歉，处理您的邮件时出现了问题。请稍后重新转发这封邮件再试一次。\n\n如果问题持续出现，请联系 {feedbackEmail}。\n\n— aInbox"

@@ -52,10 +52,10 @@ Must contain all five template keys:
 
 | Key | Purpose | Shape |
 |-----|---------|-------|
-| `summary` | Primary output (wraps LLM response) | `{ "en": "...", "zh": "..." }` |
+| `result` | Primary output (wraps LLM response) | `{ "en": "...", "zh": "..." }` |
 | `agent` | Direct email response | `{ "en": "...", "zh": "..." }` |
 | `guidance` | Sent when mode is unclear | `{ "subject": { ... }, "body": { ... } }` |
-| `error` | Sent on processing failure | `{ "body": { "en": "...", "zh": "..." } }` |
+| `error` | Sent on processing failure | `{ "subject": { ... }, "body": { ... } }` |
 | `rateLimit` | Sent when daily limit is reached | `{ "subject": { ... }, "body": { ... } }` |
 
 ### examples/

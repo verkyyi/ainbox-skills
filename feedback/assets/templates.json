@@ -1,15 +1,15 @@
 {
-  "summary": {
-    "en": "{greeting}\n\n{summary}\n\n{tip}",
-    "zh": "{greeting}\n\n{summary}\n\n{tip}"
+  "result": {
+    "en": "{greeting}\n\n{result}\n\n{tip}",
+    "zh": "{greeting}\n\n{result}\n\n{tip}"
   },
   "feedback": {
-    "en": "{greeting}\n\n{summary}\n\n{tip}",
-    "zh": "{greeting}\n\n{summary}\n\n{tip}"
+    "en": "{greeting}\n\n{result}\n\n{tip}",
+    "zh": "{greeting}\n\n{result}\n\n{tip}"
   },
   "agent": {
-    "en": "{greeting}\n\n{summary}\n\n{tip}",
-    "zh": "{greeting}\n\n{summary}\n\n{tip}"
+    "en": "{greeting}\n\n{result}\n\n{tip}",
+    "zh": "{greeting}\n\n{result}\n\n{tip}"
   },
   "guidance": {
     "subject": {
@@ -22,6 +22,10 @@
     }
   },
   "error": {
+    "subject": {
+      "en": "Re: {originalSubject}",
+      "zh": "Re: {originalSubject}"
+    },
     "body": {
       "en": "{greeting}\n\nSorry, something went wrong while processing your feedback. Please try again in a few minutes.\n\nIf this keeps happening, you can reach us directly at verkyyi@gmail.com.\n\n— aInbox Feedback",
       "zh": "{greeting}\n\n抱歉，处理您的反馈时出现了问题。请稍后重试。\n\n如果问题持续出现，您可以直接联系 verkyyi@gmail.com。\n\n— aInbox Feedback"

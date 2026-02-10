@@ -78,8 +78,8 @@ These `{placeholder}` strings are replaced by the aInbox app at runtime:
 | Variable | Where | Description |
 |----------|-------|-------------|
 | `{greeting}` | all templates | Personalized greeting (e.g. "Hi John," or "Hi,") |
-| `{summary}` | summary, agent | LLM-generated summary or response text |
-| `{tip}` | summary, agent | Rotating footer tip (from tips.json) |
+| `{result}` | result, agent | LLM-generated output (summary, draft, etc.) |
+| `{tip}` | result, agent | Rotating footer tip (from tips.json) |
 | `{originalSubject}` | guidance.subject | Original email subject line |
 | `{limit}` | rateLimit.body | Total daily limit number |
 | `{hoursLeft}` | rateLimit.body | Hours until daily limit resets |
