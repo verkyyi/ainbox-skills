@@ -1,6 +1,1 @@
-{
-  "result": {
-    "en": "{greeting}\n\nBased on your forwarded email, here's a quick summary:\n\n------\n{result}\n------\n\n{tip}",
-    "zh": "{greeting}\n\n以下是您转发邮件的摘要：\n\n------\n{result}\n------\n\n{tip}"
-  }
-}
+{}
