@@ -4,10 +4,6 @@ description: >
   AI email drafting assistant at draft@ainbox.io. Forward an email to get a
   reply draft, or describe what you need written from scratch. Supports
   iterative refinement through follow-up replies.
-metadata:
-  author: verkyyi
-  version: "1.1"
-
 config:
   openaiModel: gpt-4.1-mini
   dailyLimit: 30

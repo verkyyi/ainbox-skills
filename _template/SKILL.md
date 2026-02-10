@@ -10,10 +10,6 @@ name: my-agent                          # Folder name and email prefix (my-agent
 description: >
   One-sentence description of what this agent does when someone emails it.
 
-metadata:
-  author: your-github-username
-  version: "1.0"
-
 # ── Runtime configuration (overrides only — omitted fields use server defaults) ──
 # See README.md for all available fields and their defaults.
 config:

@@ -3,10 +3,6 @@ name: feedback
 description: >
   Feedback handler at feedback@ainbox.io. Acknowledges user feedback,
   categorizes it, and forwards to the team.
-metadata:
-  author: verkyyi
-  version: "1.0"
-
 config:
   openaiModel: gpt-4.1-mini
   maxCompletionTokens: 2048

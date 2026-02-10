@@ -4,10 +4,6 @@ description: >
   AI email assistant at summary@ainbox.io. Summarizes forwarded emails with
   categorization, phishing detection, and action items. Responds to direct
   emails as a conversational agent about aInbox.
-metadata:
-  author: verkyyi
-  version: "1.3"
-
 config:
   openaiModel: gpt-4.1-mini
 
