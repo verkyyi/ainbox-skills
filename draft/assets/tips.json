@@ -1,0 +1,26 @@
+[
+  {
+    "en": "Tip: Reply to any draft to refine it — adjust tone, length, or details.",
+    "zh": "提示：回复任何草稿即可修改 — 调整语气、长度或细节。"
+  },
+  {
+    "en": "Tip: Be specific about tone — \"professional but warm\" or \"direct and brief\" helps me nail it.",
+    "zh": "提示：具体说明语气 — 比如\"专业但温暖\"或\"直接简短\"，能帮我更准确地把握。"
+  },
+  {
+    "en": "aInbox Draft is free during beta ({dailyLimit} drafts/day).",
+    "zh": "aInbox Draft 公测期间免费（每天 {dailyLimit} 条草稿）。"
+  },
+  {
+    "en": "Tip: Include context like who you're writing to and why — better context = better draft.",
+    "zh": "提示：说明写给谁、为什么写 — 背景越清楚，草稿越准确。"
+  },
+  {
+    "en": "Feedback? {feedbackEmail}",
+    "zh": "反馈？{feedbackEmail}"
+  },
+  {
+    "en": "Tip: I draft in whatever language you write in — just email me in your preferred language.",
+    "zh": "提示：你用什么语言写，我就用什么语言起草 — 直接用你习惯的语言发邮件即可。"
+  }
+]
