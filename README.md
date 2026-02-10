@@ -12,8 +12,7 @@ Each folder maps to an email address receiver at `@ainbox.io`:
 summary/              → summary@ainbox.io
 ├── SKILL.md          # System prompt + config (the AI's instructions)
 ├── assets/
-│   ├── templates.json  # Email reply templates (EN/ZH)
-│   └── tips.json       # Rotating footer tips (EN/ZH)
+│   └── templates.json  # Email reply templates (EN/ZH)
 └── examples/           # Sample emails for testing changes
     └── *.txt
 ```
@@ -79,9 +78,6 @@ variables:
     - greeting
     - summary
     - tip
-  tips:         # Variables used inside assets/tips.json
-    - dailyLimit
-    - feedbackEmail
 ```
 
 This makes each agent self-documenting and allows the platform to validate that all required variables are provided at runtime.
@@ -109,24 +105,13 @@ These placeholders are replaced by the aInbox app at runtime:
 | `{refSection}` | rateLimit.body | Referral promotion section (or empty) |
 | `{feedbackEmail}` | error.body, rateLimit.body | Feedback email address |
 
-### In tips.json
-
-| Variable | Description |
-|----------|-------------|
-| `{dailyLimit}` | Daily quota per sender |
-| `{remaining}` | Remaining requests for the sender today |
-| `{limit}` | Total daily limit number |
-| `{referralCode}` | Sender's referral code |
-| `{referralBonus}` | Bonus per successful referral |
-| `{feedbackEmail}` | Feedback email address |
-
 ## Contributing
 
 Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
 
 Quick start:
 1. Copy `_template/` to a new folder named after your agent's email prefix
-2. Fill in `SKILL.md`, `templates.json`, and `tips.json`
+2. Fill in `SKILL.md` and `templates.json`
 3. Add example emails in `examples/` so reviewers can test
 4. Submit a PR
 

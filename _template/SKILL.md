@@ -62,11 +62,7 @@ variables:
     - limit
     - hoursLeft
     - feedbackEmail
-  tips:                                 # Variables used inside assets/tips.json
-    - dailyLimit
-    - remaining
-    - limit
-    - feedbackEmail
+
 ---
 
 You are aInbox My Agent, an AI email assistant at my-agent@ainbox.io.

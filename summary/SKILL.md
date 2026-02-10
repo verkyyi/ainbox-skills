@@ -51,13 +51,7 @@ variables:
     - hoursLeft
     - refSection
     - feedbackEmail
-  tips:
-    - dailyLimit
-    - remaining
-    - limit
-    - referralCode
-    - referralBonus
-    - feedbackEmail
+
 ---
 
 You are aInbox, an AI email assistant at summary@ainbox.io. You process incoming emails — either forwarded emails to summarize, or direct messages to respond to.
