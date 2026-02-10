@@ -1,19 +1,19 @@
 {
-  "summary": {
-    "en": "{greeting}\n\nHere's your draft:\n\n------\n{summary}\n------\n\n{tip}",
-    "zh": "{greeting}\n\n以下是为您起草的内容：\n\n------\n{summary}\n------\n\n{tip}"
+  "result": {
+    "en": "{greeting}\n\nHere's your draft:\n\n------\n{result}\n------\n\n{tip}",
+    "zh": "{greeting}\n\n以下是为您起草的内容：\n\n------\n{result}\n------\n\n{tip}"
   },
   "reply-assist": {
-    "en": "{greeting}\n\nHere's a draft reply you can send back:\n\n------\n{summary}\n------\n\n{tip}",
-    "zh": "{greeting}\n\n以下是为您起草的回复：\n\n------\n{summary}\n------\n\n{tip}"
+    "en": "{greeting}\n\nHere's a draft reply you can send back:\n\n------\n{result}\n------\n\n{tip}",
+    "zh": "{greeting}\n\n以下是为您起草的回复：\n\n------\n{result}\n------\n\n{tip}"
   },
   "draft": {
-    "en": "{greeting}\n\nHere's your draft:\n\n------\n{summary}\n------\n\n{tip}",
-    "zh": "{greeting}\n\n以下是为您起草的内容：\n\n------\n{summary}\n------\n\n{tip}"
+    "en": "{greeting}\n\nHere's your draft:\n\n------\n{result}\n------\n\n{tip}",
+    "zh": "{greeting}\n\n以下是为您起草的内容：\n\n------\n{result}\n------\n\n{tip}"
   },
   "agent": {
-    "en": "{greeting}\n\n{summary}\n\n{tip}",
-    "zh": "{greeting}\n\n{summary}\n\n{tip}"
+    "en": "{greeting}\n\n{result}\n\n{tip}",
+    "zh": "{greeting}\n\n{result}\n\n{tip}"
   },
   "guidance": {
     "subject": {
@@ -26,6 +26,10 @@
     }
   },
   "error": {
+    "subject": {
+      "en": "Re: {originalSubject}",
+      "zh": "Re: {originalSubject}"
+    },
     "body": {
       "en": "{greeting}\n\nSorry, something went wrong while generating your draft. Please try again in a few minutes.\n\nIf this keeps happening, let us know at {feedbackEmail}.\n\n— aInbox Draft",
       "zh": "{greeting}\n\n抱歉，生成草稿时出现了问题。请稍后重试。\n\n如果问题持续出现，请联系 {feedbackEmail}。\n\n— aInbox Draft"
