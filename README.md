@@ -29,10 +29,10 @@ To create a new agent, copy `_template/` and follow the instructions inside. See
 
 The `SKILL.md` file follows the [Agent Skills specification](https://agentskills.io/specification):
 
-- **YAML frontmatter**: `name`, `description`, `metadata`, `config`, and `variables`
+- **YAML frontmatter**: `name`, `description`, `metadata`, and `config`
 - **Markdown body**: The system prompt passed directly to the LLM
 
-The prompt contains `{variable}` placeholders that are interpolated at runtime (see below).
+The prompt and templates contain `{placeholder}` strings that are interpolated at runtime (see below).
 
 ### Frontmatter sections
 
@@ -42,7 +42,6 @@ The prompt contains `{variable}` placeholders that are interpolated at runtime (
 | `description` | One-sentence description of the agent |
 | `metadata` | `author` and `version` |
 | `config` | Runtime configuration consumed by the platform (see below) |
-| `variables` | Declares every `{variable}` the agent's files expect (see below) |
 
 ## Config reference
 
@@ -65,25 +64,9 @@ The `config:` block only needs fields that differ from server defaults. Omitted 
 | `senderLimitOverrides` | object | `{}` | Per-sender daily limit overrides, e.g. `{"vip@co.com": 100}` |
 | `dryRun` | bool | `false` | `true` = log replies but don't actually send them |
 
-## Variable contract
-
-Each agent declares the `{variable}` placeholders it expects in a `variables:` block in its SKILL.md frontmatter. This serves as a contract between the agent and the platform:
-
-```yaml
-variables:
-  prompt:       # Variables used inside the system prompt (markdown body)
-    - dailyLimit
-  templates:    # Variables used inside assets/templates.json
-    - greeting
-    - summary
-    - tip
-```
-
-This makes each agent self-documenting and allows the platform to validate that all required variables are provided at runtime.
-
 ## Runtime variables
 
-These placeholders are replaced by the aInbox app at runtime:
+These `{placeholder}` strings are replaced by the aInbox app at runtime:
 
 ### In SKILL.md (system prompt)
 

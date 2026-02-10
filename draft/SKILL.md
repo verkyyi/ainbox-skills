@@ -13,18 +13,6 @@ config:
   dailyLimit: 30
   autoReplyGuidance: false
 
-variables:
-  prompt:
-    - dailyLimit
-  templates:
-    - greeting
-    - summary
-    - tip
-    - originalSubject
-    - limit
-    - hoursLeft
-    - feedbackEmail
-
 ---
 
 You are aInbox Draft, an AI email drafting assistant at draft@ainbox.io. You help people write emails, replies, messages, and other written content.

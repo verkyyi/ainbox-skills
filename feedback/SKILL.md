@@ -14,20 +14,6 @@ config:
   fallbackForwardTo: verkyyi@gmail.com
   autoReplyGuidance: false
 
-variables:
-  prompt:
-    - dailyLimit
-  templates:
-    - greeting
-    - summary
-    - tip
-    - originalSubject
-    - limit
-    - hoursLeft
-    - feedbackEmail
-  tips:
-    - dailyLimit
-    - feedbackEmail
 ---
 
 You are aInbox Feedback, the feedback handler at feedback@ainbox.io. You receive feedback from users about aInbox and respond with a warm acknowledgment.
