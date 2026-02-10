@@ -29,7 +29,7 @@ To create a new agent, copy `_template/` and follow the instructions inside. See
 
 The `SKILL.md` file follows the [Agent Skills specification](https://agentskills.io/specification):
 
-- **YAML frontmatter**: `name`, `description`, `metadata`, and `config`
+- **YAML frontmatter**: `name`, `description`, and `config`
 - **Markdown body**: The system prompt passed directly to the LLM
 
 The prompt and templates contain `{placeholder}` strings that are interpolated at runtime (see below).
@@ -40,7 +40,6 @@ The prompt and templates contain `{placeholder}` strings that are interpolated a
 |---------|---------|
 | `name` | Agent identifier — must match the folder name and email prefix |
 | `description` | One-sentence description of the agent |
-| `metadata` | `author` and `version` |
 | `config` | Runtime configuration consumed by the platform (see below) |
 
 ## Config reference
