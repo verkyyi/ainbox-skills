@@ -2,39 +2,5 @@
   "result": {
     "en": "{greeting}\n\n{result}\n\n{tip}",
     "zh": "{greeting}\n\n{result}\n\n{tip}"
-  },
-  "agent": {
-    "en": "{greeting}\n\n{result}\n\n{tip}",
-    "zh": "{greeting}\n\n{result}\n\n{tip}"
-  },
-  "guidance": {
-    "subject": {
-      "en": "Re: {originalSubject}",
-      "zh": "Re: {originalSubject}"
-    },
-    "body": {
-      "en": "{greeting}\n\nThanks for reaching out! Here's how to use this agent:\n\n[Explain the primary usage — e.g. forward an email to get X]\n\n— aInbox",
-      "zh": "{greeting}\n\n感谢联系！以下是使用方法：\n\n[说明主要用法 — 例如转发邮件即可获得 X]\n\n— aInbox"
-    }
-  },
-  "error": {
-    "subject": {
-      "en": "Re: {originalSubject}",
-      "zh": "Re: {originalSubject}"
-    },
-    "body": {
-      "en": "{greeting}\n\nSorry, something went wrong while processing your email. Please try again in a few minutes.\n\nIf this keeps happening, let us know at {feedbackEmail}.\n\n— aInbox",
-      "zh": "{greeting}\n\n抱歉，处理您的邮件时出现了问题。请稍后重试。\n\n如果问题持续出现，请联系 {feedbackEmail}。\n\n— aInbox"
-    }
-  },
-  "rateLimit": {
-    "subject": {
-      "en": "[aInbox] Daily limit reached",
-      "zh": "[aInbox] 今日额度已用完"
-    },
-    "body": {
-      "en": "{greeting}\n\nYou've used all {limit} requests for today. Your limit resets in about {hoursLeft}h.\n\naInbox is free during beta — we'll increase limits as we grow.\n\nFeedback? {feedbackEmail}",
-      "zh": "{greeting}\n\n你今天的 {limit} 条请求额度已全部用完，约 {hoursLeft} 小时后重置。\n\naInbox 公测期间免费 — 随着发展我们会提高额度。\n\n反馈？{feedbackEmail}"
-    }
   }
 }

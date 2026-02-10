@@ -13,37 +13,25 @@
       "additionalProperties": false
     },
 
+    "utilityTemplate": {
+      "type": "object",
+      "properties": {
+        "subject": { "$ref": "#/definitions/bilingualString" },
+        "body":    { "$ref": "#/definitions/bilingualString" }
+      },
+      "required": ["subject", "body"]
+    },
+
     "templatesJson": {
       "type": "object",
       "properties": {
-        "summary": { "$ref": "#/definitions/bilingualString" },
-        "agent":   { "$ref": "#/definitions/bilingualString" },
-        "guidance": {
-          "type": "object",
-          "properties": {
-            "subject": { "$ref": "#/definitions/bilingualString" },
-            "body":    { "$ref": "#/definitions/bilingualString" }
-          },
-          "required": ["subject", "body"]
-        },
-        "error": {
-          "type": "object",
-          "properties": {
-            "body": { "$ref": "#/definitions/bilingualString" }
-          },
-          "required": ["body"]
-        },
-        "rateLimit": {
-          "type": "object",
-          "properties": {
-            "subject": { "$ref": "#/definitions/bilingualString" },
-            "body":    { "$ref": "#/definitions/bilingualString" }
-          },
-          "required": ["subject", "body"]
-        }
+        "result":    { "$ref": "#/definitions/bilingualString" },
+        "agent":     { "$ref": "#/definitions/bilingualString" },
+        "guidance":  { "$ref": "#/definitions/utilityTemplate" },
+        "error":     { "$ref": "#/definitions/utilityTemplate" },
+        "rateLimit": { "$ref": "#/definitions/utilityTemplate" }
       },
-      "required": ["summary", "agent", "guidance", "error", "rateLimit"],
-      "additionalProperties": false
+      "additionalProperties": { "$ref": "#/definitions/bilingualString" }
     },
 
     "tipsJson": {
