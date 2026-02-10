@@ -8,20 +8,6 @@ metadata:
   author: verkyyi
   version: "1.1"
 
-agent:
-  address: draft@ainbox.io
-  displayName: aInbox Draft Agent
-  tagline: Tell me what to write. Get a ready-to-send draft.
-  modes:
-    reply-assist: Forward an email you received — get a draft reply you can send back.
-    draft: Email directly with a description of what you need written from scratch.
-  capabilities:
-    - email-drafting
-    - multilingual
-    - tone-adaptation
-    - iterative-refinement
-    - context-awareness
-
 config:
   openaiModel: gpt-4.1-mini
   maxCompletionTokens: 4096
