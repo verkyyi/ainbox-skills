@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "en": "{greeting}\n\n{summary}\n\n{tip}",
+    "zh": "{greeting}\n\n{summary}\n\n{tip}"
+  },
+  "feedback": {
+    "en": "{greeting}\n\n{summary}\n\n{tip}",
+    "zh": "{greeting}\n\n{summary}\n\n{tip}"
+  },
+  "agent": {
+    "en": "{greeting}\n\n{summary}\n\n{tip}",
+    "zh": "{greeting}\n\n{summary}\n\n{tip}"
+  },
+  "guidance": {
+    "subject": {
+      "en": "Re: {originalSubject}",
+      "zh": "Re: {originalSubject}"
+    },
+    "body": {
+      "en": "{greeting}\n\nThanks for reaching out! This is aInbox Feedback — we collect and forward feedback to the team.\n\nTo share feedback, just send an email to feedback@ainbox.io describing your experience, suggestion, or issue.\n\nLooking for other aInbox features? Forward any email to summary@ainbox.io for a summary, or draft@ainbox.io for help writing a reply.\n\n— aInbox Feedback",
+      "zh": "{greeting}\n\n感谢联系！这里是 aInbox 反馈 — 我们收集并转发反馈给团队。\n\n要分享反馈，只需发送邮件到 feedback@ainbox.io，描述您的体验、建议或问题。\n\n需要其他 aInbox 功能？将邮件转发到 summary@ainbox.io 获取摘要，或发送到 draft@ainbox.io 获取写作帮助。\n\n— aInbox Feedback"
+    }
+  },
+  "error": {
+    "body": {
+      "en": "{greeting}\n\nSorry, something went wrong while processing your feedback. Please try again in a few minutes.\n\nIf this keeps happening, you can reach us directly at verkyyi@gmail.com.\n\n— aInbox Feedback",
+      "zh": "{greeting}\n\n抱歉，处理您的反馈时出现了问题。请稍后重试。\n\n如果问题持续出现，您可以直接联系 verkyyi@gmail.com。\n\n— aInbox Feedback"
+    }
+  },
+  "rateLimit": {
+    "subject": {
+      "en": "[aInbox] Daily feedback limit reached",
+      "zh": "[aInbox] 今日反馈额度已用完"
+    },
+    "body": {
+      "en": "{greeting}\n\nYou've sent {limit} feedback messages today. Your limit resets in about {hoursLeft}h.\n\nWe appreciate your engagement! For urgent issues, you can reach us at verkyyi@gmail.com.\n\n— aInbox Feedback",
+      "zh": "{greeting}\n\n你今天已发送 {limit} 条反馈消息，约 {hoursLeft} 小时后重置。\n\n感谢您的参与！如有紧急问题，可直接联系 verkyyi@gmail.com。\n\n— aInbox Feedback"
+    }
+  }
+}
