@@ -10,39 +10,5 @@
   "draft": {
     "en": "{greeting}\n\nHere's your draft:\n\n------\n{result}\n------\n\n{tip}",
     "zh": "{greeting}\n\n以下是为您起草的内容：\n\n------\n{result}\n------\n\n{tip}"
-  },
-  "agent": {
-    "en": "{greeting}\n\n{result}\n\n{tip}",
-    "zh": "{greeting}\n\n{result}\n\n{tip}"
-  },
-  "guidance": {
-    "subject": {
-      "en": "Re: {originalSubject}",
-      "zh": "Re: {originalSubject}"
-    },
-    "body": {
-      "en": "{greeting}\n\nI'm aInbox Draft — I help you write emails, replies, and messages.\n\nJust email me at draft@ainbox.io and describe what you need. For example:\n- \"Write a polite decline for a meeting invite\"\n- \"Draft a follow-up to a client about a delayed project\"\n- \"Help me reply to this complaint professionally\"\n\nI'll send back a ready-to-use draft. Reply to refine it until it's perfect.\n\n— aInbox Draft",
-      "zh": "{greeting}\n\n我是 aInbox Draft — 帮你撰写邮件、回复和各类消息。\n\n只需发邮件到 draft@ainbox.io，描述你需要写什么。例如：\n- \"帮我写一封礼貌拒绝会议邀请的邮件\"\n- \"帮我写一封跟进客户项目延期的邮件\"\n- \"帮我专业地回复这个投诉\"\n\n我会回复一份可以直接使用的草稿。回复即可进一步修改，直到满意为止。\n\n— aInbox Draft"
-    }
-  },
-  "error": {
-    "subject": {
-      "en": "Re: {originalSubject}",
-      "zh": "Re: {originalSubject}"
-    },
-    "body": {
-      "en": "{greeting}\n\nSorry, something went wrong while generating your draft. Please try again in a few minutes.\n\nIf this keeps happening, let us know at {feedbackEmail}.\n\n— aInbox Draft",
-      "zh": "{greeting}\n\n抱歉，生成草稿时出现了问题。请稍后重试。\n\n如果问题持续出现，请联系 {feedbackEmail}。\n\n— aInbox Draft"
-    }
-  },
-  "rateLimit": {
-    "subject": {
-      "en": "[aInbox] Daily draft limit reached",
-      "zh": "[aInbox] 今日草稿额度已用完"
-    },
-    "body": {
-      "en": "{greeting}\n\nYou've used all {limit} drafts for today. Your limit resets in about {hoursLeft}h.\n\naInbox is free during beta — we'll increase limits as we grow.\n\nFeedback? {feedbackEmail}",
-      "zh": "{greeting}\n\n你今天的 {limit} 条草稿额度已全部用完，约 {hoursLeft} 小时后重置。\n\naInbox 公测期间免费 — 随着发展我们会提高额度。\n\n反馈？{feedbackEmail}"
-    }
   }
 }

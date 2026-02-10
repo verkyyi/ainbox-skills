@@ -12,7 +12,7 @@ Each folder maps to an email address receiver at `@ainbox.io`:
 summary/              → summary@ainbox.io
 ├── SKILL.md          # System prompt + config (the AI's instructions)
 ├── assets/
-│   └── templates.json  # Email reply templates (EN/ZH)
+│   └── templates.json  # Mode template overrides (EN/ZH) — optional
 └── examples/           # Sample emails for testing changes
     └── *.txt
 ```
@@ -63,6 +63,16 @@ The `config:` block only needs fields that differ from server defaults. Omitted 
 | `senderLimitOverrides` | object | `{}` | Per-sender daily limit overrides, e.g. `{"vip@co.com": 100}` |
 | `dryRun` | bool | `false` | `true` = log replies but don't actually send them |
 
+## Templates
+
+The `templates.json` file is **optional** — it only needs to contain mode templates that differ from the server defaults. The server provides default templates for all utility messages (`error`, `rateLimit`, `guidance`, `bounce`, `ccNotSupported`) and generic mode templates (`result`, `agent`). At load time, the server merges: `serverDefaults + skillTemplates` (skill keys fully replace matching default keys).
+
+Most agents only need to customize mode templates (e.g. `result` with custom framing). An agent that's happy with all defaults can use an empty `{}` or omit `templates.json` entirely.
+
+**Mode templates** wrap LLM output. Shape: `{ "en": "...", "zh": "..." }` — flat, body-only. Subject is always `Re: {originalSubject}`.
+
+**Utility templates** are system messages (error, rate limit, etc.) managed by server defaults. Skills can override them but rarely need to. Shape: `{ "subject": { "en": "...", "zh": "..." }, "body": { "en": "...", "zh": "..." } }`.
+
 ## Runtime variables
 
 These `{placeholder}` strings are replaced by the aInbox app at runtime:
@@ -73,18 +83,25 @@ These `{placeholder}` strings are replaced by the aInbox app at runtime:
 |----------|-------------|
 | `{dailyLimit}` | Daily quota per sender (e.g. `50`) |
 
-### In templates.json
+### In templates.json (mode templates)
 
 | Variable | Where | Description |
 |----------|-------|-------------|
 | `{greeting}` | all templates | Personalized greeting (e.g. "Hi John," or "Hi,") |
-| `{result}` | result, agent | LLM-generated output (summary, draft, etc.) |
-| `{tip}` | result, agent | Rotating footer tip (from tips.json) |
-| `{originalSubject}` | guidance.subject | Original email subject line |
-| `{limit}` | rateLimit.body | Total daily limit number |
-| `{hoursLeft}` | rateLimit.body | Hours until daily limit resets |
-| `{refSection}` | rateLimit.body | Referral promotion section (or empty) |
-| `{feedbackEmail}` | error.body, rateLimit.body | Feedback email address |
+| `{result}` | mode templates | LLM-generated output (summary, draft, etc.) |
+| `{tip}` | mode templates | Rotating footer tip (from tips.json) |
+
+### In utility templates (server defaults — override only if needed)
+
+| Variable | Where | Description |
+|----------|-------|-------------|
+| `{originalSubject}` | error, guidance | Original email subject line |
+| `{limit}` | rateLimit | Total daily limit number |
+| `{hoursLeft}` | rateLimit | Hours until daily limit resets |
+| `{feedbackEmail}` | error, rateLimit, guidance | Feedback email address |
+| `{agentName}` | error, guidance | Agent display name (e.g. "aInbox Summary") |
+| `{targetAgent}` | bounce | The unrecognized agent address prefix |
+| `{agentList}` | bounce | Formatted list of available agents |
 
 ## Contributing
 

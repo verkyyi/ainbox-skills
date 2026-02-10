@@ -48,15 +48,17 @@ The YAML frontmatter has these required sections:
 
 ### templates.json
 
-Must contain all five template keys:
+Optional — only include mode templates that differ from server defaults. The server provides default templates for all utility messages (`error`, `rateLimit`, `guidance`, `bounce`, `ccNotSupported`) and generic mode templates (`result`, `agent`). Skill templates are merged on top of these defaults at load time.
+
+Most agents only need to customize mode templates with custom framing:
 
 | Key | Purpose | Shape |
 |-----|---------|-------|
 | `result` | Primary output (wraps LLM response) | `{ "en": "...", "zh": "..." }` |
 | `agent` | Direct email response | `{ "en": "...", "zh": "..." }` |
-| `guidance` | Sent when mode is unclear | `{ "subject": { ... }, "body": { ... } }` |
-| `error` | Sent on processing failure | `{ "subject": { ... }, "body": { ... } }` |
-| `rateLimit` | Sent when daily limit is reached | `{ "subject": { ... }, "body": { ... } }` |
+| Custom modes | Agent-specific modes (e.g. `reply-assist`, `draft`) | `{ "en": "...", "zh": "..." }` |
+
+Utility templates (`error`, `rateLimit`, `guidance`) are managed by server defaults and do **not** need to be included. Override them only if your agent needs different wording.
 
 ### examples/
 
