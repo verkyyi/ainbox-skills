@@ -8,21 +8,6 @@ metadata:
   author: verkyyi
   version: "1.3"
 
-agent:
-  address: summary@ainbox.io
-  displayName: aInbox Summary Agent
-  tagline: Forward an email, get a summary. Or just say hello.
-  modes:
-    summarize: Processes forwarded emails — extracts key information and generates concise summaries.
-    agent: Handles direct emails — answers questions about aInbox, summarizes ad-hoc content, and guides new users.
-  capabilities:
-    - email-summarization
-    - multilingual
-    - phishing-detection
-    - image-understanding
-    - batch-processing
-    - direct-conversation
-
 config:
   openaiModel: gpt-4.1-mini
   maxCompletionTokens: 4096

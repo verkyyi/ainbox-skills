@@ -7,18 +7,6 @@ metadata:
   author: verkyyi
   version: "1.0"
 
-agent:
-  address: feedback@ainbox.io
-  displayName: aInbox Feedback
-  tagline: We read every message. Thank you for your feedback.
-  modes:
-    feedback: Acknowledges incoming feedback — categorizes it and confirms receipt.
-    agent: Handles questions about aInbox or the feedback process.
-  capabilities:
-    - feedback-collection
-    - multilingual
-    - auto-categorization
-
 config:
   openaiModel: gpt-4.1-mini
   maxCompletionTokens: 2048

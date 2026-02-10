@@ -14,23 +14,6 @@ metadata:
   author: your-github-username
   version: "1.0"
 
-# ── Agent profile (shown to users) ───────────────────────────────────────────
-agent:
-  address: my-agent@ainbox.io           # Must match folder name
-  displayName: aInbox My Agent          # Human-friendly name
-  tagline: Short one-liner shown in directories and help text.
-  modes:
-    # List each distinct way users interact with the agent.
-    # Key   = internal mode identifier (used by the platform)
-    # Value = one-line description shown to users
-    primary-mode: Describe what happens when the user forwards an email.
-    agent: Describe what happens when the user emails directly.
-  capabilities:
-    # Freeform tags — help the platform and users discover what this agent can do.
-    - capability-one
-    - capability-two
-    - multilingual
-
 # ── Runtime configuration (consumed by the aInbox platform) ──────────────────
 config:
   openaiModel: gpt-4.1-mini            # LLM model ID passed to the API

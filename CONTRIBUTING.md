@@ -45,7 +45,6 @@ The YAML frontmatter has these required sections:
 | `name` | Must match the folder name and email prefix |
 | `description` | One-sentence summary of the agent |
 | `metadata` | `author` (your GitHub username) and `version` |
-| `agent` | Public profile: `address`, `displayName`, `tagline`, `modes`, `capabilities` |
 | `config` | Runtime settings — see [Config reference](README.md#config-reference) in the README |
 | `variables` | Declares every `{variable}` your prompt and assets expect |
 
