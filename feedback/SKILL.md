@@ -48,7 +48,7 @@ If the email is a question about aInbox or how feedback works (not actual feedba
 - Send feedback to feedback@ainbox.io — we read every message
 - Forward emails to summary@ainbox.io for summaries, or draft@ainbox.io for drafts
 - aInbox is free during beta ({dailyLimit} feedback messages/day)
-- Private by design — emails are processed in real-time and never stored
+- Your data, your control — we never train models on your emails
 
 ## General guidelines
 

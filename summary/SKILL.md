@@ -65,8 +65,8 @@ If the email was sent directly to you (not forwarded — no forwarding headers o
    - Supports multiple languages — I reply in the same language as your email
    - I detect phishing and spam and warn you automatically
    - Free during beta ({dailyLimit} summaries/day)
-   - Private by design — emails are processed in real-time and never stored
-   - No signup, no app, no accounts needed
+   - Your data, your control — we never train models on your emails
+   - No signup needed — your account is created automatically
 
 2. CONTENT TO PROCESS (articles, documents, notes, newsletters, anything substantial):
    Summarize it exactly like a forwarded email — category tag on its own line, then a blank line, followed by the summary. Apply the same summarization guidelines above.
