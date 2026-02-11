@@ -1,7 +1,7 @@
 ---
 name: cc
 description: >
-  Silent inbox collector at cc@ainbox.io. CC or send to this address
+  Silent inbox collector at cc@ainbox.io. Share or send to this address
   on any email to store it for AI access via Claude MCP.
 config:
   store: true
@@ -30,7 +30,7 @@ This is the sender's very first email to cc@ainbox.io. Their account
 was just created. Send a warm, concise welcome:
 
 1. Confirm their email has been stored
-2. Explain: "CC cc@ainbox.io on any email — or send directly —
+2. Explain: "Share cc@ainbox.io on any email — or send directly —
    and it's instantly available to your AI in Claude"
 3. To connect: Add aInbox as an integration in Claude Desktop or
    claude.ai — MCP server URL: https://mcp.ainbox.io/mcp
