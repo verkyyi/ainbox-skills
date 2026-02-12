@@ -24,8 +24,13 @@ PayPal Security Team
 
 
 --- Expected output ---
+Hi!
+
 [Security]
 
 ⚠ This email may be a phishing attempt — sender domain is "paypa1.com" (not paypal.com), and the verification link goes to "paypa1-secure-verify.com", a spoofed domain. Do not click any links or provide personal information.
 
 Claims unusual activity on your PayPal account and demands identity verification within 24 hours or permanent suspension. Classic urgency + fake link phishing pattern.
+
+Best,
+aInbox
