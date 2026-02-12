@@ -26,9 +26,14 @@ Read more at techcrunch.com
 
 
 --- Expected output ---
+Hi!
+
 [Newsletter]
 
 Three stories today:
 - OpenAI launched GPT-5 with native multimodal reasoning — available now on ChatGPT Plus and the API at <b>$30/1M input tokens</b>
 - Stripe acquiring PayHere (Sri Lankan payments, 50k merchants) for $200M to expand into Southeast Asia
 - EU passed the AI Liability Directive — AI providers liable for damages, effective January 2027
+
+Best,
+aInbox

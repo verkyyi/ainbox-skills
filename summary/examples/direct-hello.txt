@@ -7,15 +7,11 @@ Hi! I got this email address from a friend. What do you do?
 
 
 --- Expected output ---
-I'm aInbox — I summarize emails so you don't have to read the whole thing.
+Hi!
 
-How it works: forward any email to summary@ainbox.io and you'll get a concise summary back in seconds. Works with newsletters, receipts, notifications, conversations — anything.
+I'm aInbox — I summarize emails so you don't have to read the whole thing. Just forward any email to summary@ainbox.io and you'll get a short summary back in seconds. It works with any email client, no signup needed.
 
-A few things to know:
-- Works with any email client (Gmail, Outlook, Apple Mail, etc.)
-- I reply in whatever language your email is in
-- I flag phishing and spam automatically
-- Free during beta (50 summaries/day)
-- No signup or app needed — just forward and go
+Give it a try — forward something over!
 
-Give it a try — forward something and see what comes back.
+Cheers,
+aInbox
