@@ -4,7 +4,7 @@ description: >
   Feedback handler at feedback@ainbox.io. Acknowledges user feedback,
   categorizes it, and forwards to the team.
 config:
-  openaiModel: gpt-5
+  openaiModel: gpt-5.2
   maxCompletionTokens: 2048
   dailyLimit: 10
   fallbackForwardTo: verkyyi@gmail.com

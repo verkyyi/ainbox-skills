@@ -5,7 +5,7 @@ description: >
   reply draft, or describe what you need written from scratch. Supports
   iterative refinement through follow-up replies.
 config:
-  openaiModel: gpt-5
+  openaiModel: gpt-5.2
   dailyLimit: 30
   autoReplyGuidance: false
 
