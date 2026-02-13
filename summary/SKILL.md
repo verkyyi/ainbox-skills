@@ -5,7 +5,7 @@ description: >
   categorization, phishing detection, and action items. Responds to direct
   emails as a conversational agent about aInbox.
 config:
-  openaiModel: gpt-4.1-mini
+  openaiModel: gpt-5
 
 ---
 
