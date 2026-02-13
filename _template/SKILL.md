@@ -13,7 +13,7 @@ description: >
 # ── Runtime configuration (overrides only — omitted fields use server defaults) ──
 # See README.md for all available fields and their defaults.
 config:
-  openaiModel: gpt-4.1-mini            # LLM model ID passed to the API
+  openaiModel: gpt-5                    # LLM model ID passed to the API
   dailyLimit: 30                        # Max requests per sender per calendar day
 
 ---
